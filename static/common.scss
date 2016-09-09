@@ -22,10 +22,9 @@
 
 @mixin sprite__position($sprite,$box_height) {
   $sprite-total-height: nth($sprite, 8);
-  $sprite-x: nth($sprite, 1);
   $sprite-total-height: nth($sprite, 8);
   $sprite-y: nth($sprite, 2) / ($sprite-total-height - $box_height) * 100%;
-  background-position: $sprite-x  $sprite-y;
+  background-position: center  $sprite-y;
 }
 
 @mixin _sprite($sprite,$box_height) {

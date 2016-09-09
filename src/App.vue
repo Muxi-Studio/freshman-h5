@@ -43,6 +43,11 @@ export default {
 @import '../static/common.scss';
 @import '../static/mixins/_sprite.scss';
 
+@font-face {
+	font-family: 'zcool';
+	src: url('../static/font.ttf');
+}
+
 html,body {
 	width: 100%;
 	height: 100%;
@@ -68,6 +73,13 @@ body {
 	background-size:100%;
 	@include sprite__position($bg-filter,1334px);
 }
+.v_center {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	white-space:nowrap;  
+}
 .pointer {
 	height: 1.40rem;
 	position: fixed;
@@ -75,29 +87,127 @@ body {
 	left: calc(50% - 0.54rem);
 	width: 1.08rem;
 	background: url('sprite/sprite.png') no-repeat;
-	@include sprite__size($pointer,120px);
-	@include sprite__position($pointer,120px);
+	@include sprite__size($pointer,107px);
+	@include sprite__position($pointer,107px);
 	-webkit-animation: pointer_translateY .9s  linear 1.2s 10;
     animation: pointer_translateY .9s  linear 1.2s 10;
    	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards; 
 	@include eliminate_flash;
 }
-@keyframes pointer_translateY
+.line {
+	display: inline-block;
+	width: .2rem;
+	height: .1rem;
+}
+.line_top {
+	border-top: .08rem solid;
+}
+.line_bottom {
+	border-bottom: .08rem solid;
+}
+.line_box_before,
+.line_box_after {
+	display: inline-block;
+	font-size: 0;
+}
+.line_box_before {
+	margin-right: -.4rem;
+}
+.line_box_after {
+	margin-left: -.4rem;
+}
+.current {
+	.fade_in_count_3 {
+		animation: fade_in_count 1.2s  linear .3s 3;
+		animation-fill-mode: forwards;
+	}
+	.fade_in_delay_3 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in 1.2s  linear .3s 1;
+		animation-fill-mode: forwards;
+	}
+	.fade_in_delay_6 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in 1.2s  linear .6s 1;
+		animation-fill-mode: forwards;
+	}
+	.fade_in_delay_12 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in .9s  linear 1.2s 1;
+		animation-fill-mode: forwards;
+	}
+	.fade_in_delay_21 {
+		animation: fade_in .9s  linear 2.1s 1;
+		animation-fill-mode: forwards;
+	}
+	.txt_fade_in_delay_9 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in .9s  linear .9s 1;
+		animation-fill-mode: forwards;
+	}
+	.txt_fade_in_delay_12 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in 1.2s  linear 1.2s 1;
+		animation-fill-mode: forwards;
+	}
+	.txt_fade_in_delay_15 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in 1.5s  linear 1.5s 1;
+		animation-fill-mode: forwards;
+	}
+	.txt_fade_in_delay_18 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: fade_in 1.8s  linear 1.8s 1;
+		animation-fill-mode: forwards;
+	}
+}
+@keyframes fade_in_count
 {
 	0 {
-		opacity: 1;
-		filter: alpha(opacity=1);
-		bottom: 1.67rem;
+		opacity: 0;
+		filter: alpha(opacity=0);
 	}
 	50% {
 		opacity: .5;
 		filter: alpha(opacity=.5);
+	}
+	100% {
+		opacity: 1;
+		filter: alpha(opacity=1);
+	}
+}
+@keyframes fade_in
+{
+	0 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	50% {
+		opacity: .5;
+		filter: alpha(opacity=.4);
+	}
+	100% {
+		opacity: 1;
+		filter: alpha(opacity=1);
+	}
+}
+@keyframes pointer_translateY
+{
+	0 {
+		bottom: 1.67rem;
+	}
+	50% {
 		bottom: 1.37rem;
 	}
 	100% {
-		opacity: 0;
-		filter: alpha(opacity=0);
 		bottom: 1.07rem;
 	}
 }

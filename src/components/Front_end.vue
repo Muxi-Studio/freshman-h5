@@ -1,22 +1,22 @@
 <template>
-	<div class="front_end page">
+	<div class="page">
 		<div class="mian">
-			<div class="front_end_color">
+			<div class="front_end_color front_end_color_in">
 			</div>
-			<div class="group sub color_green">
-				<span class="stress color_yellow">前端组</span>—打造用户界面
-			</div>
-			<div class="txt sub color_green">
-				<div>
+			<div class="txt v_center sub color_green fade_in_delay_6">
+				<div class="group color_green">
+					<span class="stress color_yellow">前端组</span>—打造用户界面
+				</div>
+				<div class="indent">
 					他是<span class="stress">界面开发</span>的种子选手
 				</div>
-				<div>
+				<div class="indent">
 					拥有娴熟的技术
 				</div>
-				<div>
+				<div class="indent">
 					他能够带来一场又一场
 				</div>
-				<div class="stress">
+				<div class="stress indent">
 					用户盛宴
 				</div>
 			</div>
@@ -24,37 +24,38 @@
 	</div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
 
-.front_end {
+.page {
 	width: 100%;
 	height: 100%;
 	.mian {
 		height: y_size(1285);
 		width: 100%;
-		display: inline-block;
+		position: relative;
 		@include _sprite($front_end_line,1285px);
 	}
 	.front_end_color {
 		height: 49.96%;
 		width: 100%;
-		margin-top: 3.68%;
+		position: absolute;
+		top: 2%;
+        transform: translate(30px);
 		@include _sprite($front_end_color,642px);
 	}
 	.group {
-		padding-bottom: y_size(90);
+		font-size: .72rem;
+		margin-bottom: .5rem;
+	}
+	.indent {
+		text-indent: .5rem;
 	}
 	.txt {
 		line-height: 1.25;
-		padding-left: x_size(100);
+		position: absolute;
+		top: 54%;
 	}
 	.stress {
 		font-size: .96rem;
@@ -70,6 +71,32 @@ export default {
 	}
 	.group {
 		text-align: center;
+	}
+}
+.current {
+	.front_end_color_in {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		animation: front_end_color_in .5s  linear .3s 1;
+		animation-fill-mode: forwards;
+	}
+}
+@keyframes front_end_color_in
+{
+	0 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		transform: translate(30px);
+	}
+	50% {
+		opacity: .5;
+		filter: alpha(opacity=.5);
+		transform: translate(15px);
+	}
+	100% {
+		opacity: 1;
+		filter: alpha(opacity=1);
+		transform: translate(0);
 	}
 }
 </style>
