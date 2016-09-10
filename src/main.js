@@ -2,6 +2,18 @@ import Vue from 'vue'
 import App from './App'
 
 /* eslint-disable no-new */
+
+Vue.directive('load', {
+    isFn : true,
+    acceptStatement:true,
+    update : function(fn) {
+        if(typeof fn !== 'function') {
+            return console.error('The param of directive "v-load" must be a function!');
+        }
+        window.addEventListener('load', fn,false) 
+    }
+});
+
 new Vue({
   el: 'body',
   components: { App }

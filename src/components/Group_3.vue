@@ -2,6 +2,9 @@
 	<div class="page">
 		<div class="mian">
 			<div class="group_3_2 fade_in_delay_3"></div>
+			<div class="xueer product">学而</div>
+			<div class="box product">华师匣子</div>
+			<div class="rbt product">木小犀</div>
 			<div class="txt v_center">
 				<div class="txt_c color_blue txt_fade_in_delay_9">
 					<div>
@@ -35,45 +38,53 @@
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
 
-.page {
+.mian {
+	height: y_size(1285);
+	position: relative;
 	width: 100%;
-	height: 100%;
-	.mian {
-		height: y_size(1285);
-		position: relative;
-		width: 100%;
-		@include _sprite($group_3_1,1285px);
-	}
-	.group_3_2 {
-		position: absolute;
-		top: 5.2%;
-		height: 51.67%;
-		width: 100%;
-		@include _sprite($group_3_2,662px);
-	}
-	.txt {
-		position: absolute;
-		top: 56%;
-		text-align: center;
-		font-size: .64rem;
-	}
-	.txt_f {
-		line-height: 1.5;
-	}
-	.txt_c {
-		line-height: 1;
-	}
-	.color_yellow {
-		color: rgb(255, 231, 95);
-	}
-	.color_blue {
-		color: rgb(1, 244, 255);
-	}
-	.intro {
-		position: absolute;
-		top: 94%;
-		color: rgb(186, 107, 23);
-		font-size: .64rem;
-	}
+	@include _sprite($group_3_1,1285px);
+}
+.group_3_2 {
+	position: absolute;
+	top: 5.2%;
+	height: 51.67%;
+	width: 100%;
+	@include _sprite($group_3_2,662px);
+}
+.product {
+	font-size: .8rem;
+	color: rgb(154, 60, 0);
+	line-height: 0.754;
+	position: absolute;
+}
+.xueer,.rbt {
+	top: 46%;
+}
+.xueer {
+	left: 8%;
+}
+.rbt {
+	left: 73%;
+}
+.box {
+	top: 45%;
+	left: 36%;
+}
+.txt {
+	top: 56%;
+	text-align: center;
+	font-size: .64rem;
+}
+.txt_f {
+	line-height: 1.5;
+}
+.txt_c {
+	line-height: 1;
+}
+.intro {
+	position: absolute;
+	top: 94%;
+	color: rgb(186, 107, 23);
+	font-size: .64rem;
 }
 </style>

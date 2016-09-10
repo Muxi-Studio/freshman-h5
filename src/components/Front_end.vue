@@ -28,57 +28,71 @@
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
 
-.page {
+.mian {
+	height: y_size(1285);
 	width: 100%;
-	height: 100%;
-	.mian {
-		height: y_size(1285);
-		width: 100%;
-		position: relative;
-		@include _sprite($front_end_line,1285px);
-	}
-	.front_end_color {
-		height: 49.96%;
-		width: 100%;
-		position: absolute;
-		top: 2%;
-        transform: translate(30px);
-		@include _sprite($front_end_color,642px);
-	}
-	.group {
-		font-size: .72rem;
-		margin-bottom: .5rem;
-	}
-	.indent {
-		text-indent: .5rem;
-	}
-	.txt {
-		line-height: 1.25;
-		position: absolute;
-		top: 54%;
-	}
-	.stress {
-		font-size: .96rem;
-	}
-	.color_yellow {
-		color: rgb(255, 231, 95);
-	}
-	.sub {
-		font-size: .64rem;
-	}
-	.color_green {
-		color: rgb(73, 186, 23);
-	}
-	.group {
-		text-align: center;
-	}
+	position: relative;
+	@include _sprite($front_end_line,1285px);
+}
+.front_end_color {
+	height: 49.96%;
+	width: 100%;
+	position: absolute;
+	top: 2%;
+    -webkit-transform: translate(30px);
+        -ms-transform: translate(30px);
+            transform: translate(30px);
+	@include _sprite($front_end_color,642px);
+}
+.group {
+	font-size: .72rem;
+	margin-bottom: .5rem;
+}
+.indent {
+	text-indent: .5rem;
+}
+.txt {
+	line-height: 1.25;
+	top: 54%;
+}
+.stress {
+	font-size: .96rem;
+}
+.sub {
+	font-size: .64rem;
+}
+.group {
+	text-align: center;
 }
 .current {
 	.front_end_color_in {
 		opacity: 0;
 		filter: alpha(opacity=0);
-		animation: front_end_color_in .5s  linear .3s 1;
-		animation-fill-mode: forwards;
+		-webkit-animation: front_end_color_in .5s  linear .3s 1;
+		        animation: front_end_color_in .5s  linear .3s 1;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+}
+@-webkit-keyframes front_end_color_in
+{
+	0 {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-webkit-transform: translate(30px);
+		        transform: translate(30px);
+	}
+	50% {
+		opacity: .5;
+		filter: alpha(opacity=.5);
+		-webkit-transform: translate(15px);
+		        transform: translate(15px);
+	}
+	100% {
+		opacity: 1;
+		filter: alpha(opacity=1);
+		-webkit-transform: translate(0);
+		        transform: translate(0);
 	}
 }
 @keyframes front_end_color_in
@@ -86,17 +100,20 @@
 	0 {
 		opacity: 0;
 		filter: alpha(opacity=0);
-		transform: translate(30px);
+		-webkit-transform: translate(30px);
+		        transform: translate(30px);
 	}
 	50% {
 		opacity: .5;
 		filter: alpha(opacity=.5);
-		transform: translate(15px);
+		-webkit-transform: translate(15px);
+		        transform: translate(15px);
 	}
 	100% {
 		opacity: 1;
 		filter: alpha(opacity=1);
-		transform: translate(0);
+		-webkit-transform: translate(0);
+		        transform: translate(0);
 	}
 }
 </style>

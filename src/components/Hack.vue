@@ -29,67 +29,80 @@
 <style lang='scss' scoped>
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
-.page {
-	width: 100%;
+
+.mian {
 	height: 100%;
-	.mian {
-		height: 100%;
-		width: 100%;
-		position: relative;
-		@include _sprite($hack_ship,1334px);
-	}
-	.ship_light {
-		height: y_size(645);
-		width: 100%;
-		position: absolute;
-		top: 4.2%;
-		@include _sprite($ship_light,645px);
-	}
-	.txt {
-		position: absolute;
-		top: 72%;
-	}
-	.watchword {
-		line-height: 1.146;
-		color: rgb(196, 199, 10);
-	}
-	.line {
-		display: inline-block;
-		height: 11.5%;
-		width: x_size(22);
-		background: #red;
-	}
-	.watchword,.for,.belief,.enter {
-		font-size: 0.64rem;
-		text-align: center;
-	}
-	.for {
-		line-height: .8;
-		color: rgb(0, 255, 72);
-	}
-	.belief {
-		line-height: 1.146;
-		color: rgb(196, 199, 10);
-	}
-	.hack_light {
-		height: y_size(115);
-		width: 100%;
-		position: absolute;
-		bottom: 3%;
-		@include _sprite($hack_light,115px);
-	}
-	.enter {
-		line-height: 1.146;
-		color: rgb(255, 141, 41);
-		padding-top: 1.5rem;
-		position: absolute;
-		bottom: 0;
-	}
+	width: 100%;
+	position: relative;
+	@include _sprite($hack_ship,1334px);
+}
+.ship_light {
+	height: y_size(645);
+	width: 100%;
+	position: absolute;
+	top: 4.2%;
+	@include _sprite($ship_light,645px);
+}
+.txt {
+	top: 72%;
+}
+.watchword {
+	line-height: 1.146;
+	color: rgb(196, 199, 10);
+}
+.line {
+	display: inline-block;
+	height: 11.5%;
+	width: x_size(22);
+	background: #red;
+}
+.watchword,.for,.belief,.enter {
+	font-size: 0.64rem;
+	text-align: center;
+}
+.for {
+	line-height: .8;
+	color: rgb(0, 255, 72);
+}
+.belief {
+	line-height: 1.146;
+	color: rgb(196, 199, 10);
+}
+.hack_light {
+	height: y_size(115);
+	width: 100%;
+	position: absolute;
+	bottom: 3%;
+	@include _sprite($hack_light,115px);
+}
+.enter {
+	line-height: 1.146;
+	color: rgb(255, 141, 41);
+	padding-top: 1.5rem;
+	position: absolute;
+	bottom: 0;
 }
 .current {
 	.hack_blink {
-		animation: hack_blink 1.8s  linear .3s 111;
-		animation-fill-mode: forwards;
+		-webkit-animation: hack_blink 1.8s  linear .3s 111;
+		        animation: hack_blink 1.8s  linear .3s 111;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+}
+@-webkit-keyframes hack_blink
+{
+	0 {
+		opacity: .1;
+		filter: alpha(opacity=.1);
+	}
+	50% {
+		opacity: .4;
+		filter: alpha(opacity=4);
+	}
+	100% {
+		opacity: .9;
+		filter: alpha(opacity=.9);
 	}
 }
 @keyframes hack_blink

@@ -27,57 +27,46 @@
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
 
-.page {
+.mian {
+	height: y_size(1285);
 	width: 100%;
-	height: 100%;
-	.mian {
-		height: y_size(1285);
-		width: 100%;
-		position: relative;
-		display: inline-block;
-		@include _sprite($product_line,1285px);
-	}
-	.product_color {
-		height: 34.32%;
-		width: 100%;
-		position: absolute;
-		top: 19.9%;
-		left: 2%;
-		@include _sprite($product_color,441px);
-	}
-	.indent {
-		text-indent: 1rem;
-	}
+	position: relative;
+	display: inline-block;
+	@include _sprite($product_line,1285px);
+}
+.product_color {
+	height: 34.32%;
+	width: 100%;
+	position: absolute;
+	top: 19.9%;
+	left: 2%;
+	@include _sprite($product_color,441px);
+}
+.indent {
+	text-indent: 1rem;
+}
+.group {
+	text-align: center;
+	font-size: .72rem;
+	margin-bottom: .5rem;
+}
+.stress_h {
+	font-size: .92rem;
+}
+.stress_l {
+	font-size: .64rem;
+}
+.sub {
+	font-size: .4886rem;
+}
+.txt_last {
+	margin-top: .5rem;
+}
+.txt {
+	line-height: 1.25;
+	top: 55%;
 	.group {
-		text-align: center;
-		font-size: .72rem;
-		margin-bottom: .5rem;
-	}
-	.stress_h {
-		font-size: .92rem;
-	}
-	.stress_l {
 		font-size: .64rem;
-	}
-	.color_yellow {
-		color: rgb(255, 231, 95);
-	}
-	.color_blue {
-		color: rgb(1, 244, 255);
-	}
-	.sub {
-		font-size: .4886rem;
-	}
-	.txt_last {
-		margin-top: .5rem;
-	}
-	.txt {
-		line-height: 1.25;
-		position: absolute;
-		top: 55%;
-		.group {
-			font-size: .64rem;
-		}
 	}
 }
 </style>

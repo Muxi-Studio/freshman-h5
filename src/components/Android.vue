@@ -32,58 +32,47 @@
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
 
-.page {
+.mian {
+	height: y_size(1285);
 	width: 100%;
-	height: 100%;
-	.mian {
-		height: y_size(1285);
-		width: 100%;
-		position: relative;
-		@include _sprite($android_line,1285px);
-	}
-	.android_color_1 {
-		height: 41.01%;
-		width: 100%;
-		position: absolute;
-		top: 13.5%;
-		display: inline-block;
-		@include _sprite($android_color_1,527px);
-	}
-	.android_color_2 {
-		height: 54.12%;
-		position: absolute;
-		top: 14.5%;
-		width: 100%;
-		@include _sprite($android_color_2,287px);
-	}
-	.group {
-		padding-bottom: y_size(90);
-	}
-	.indent {
-		text-indent: .5rem;
-	}
-	.txt {
-		line-height: 1.25;
-		position: absolute;
-		top: 54%;
-	}
-	.stress {
-		font-size: .96rem;
-	}
-	.color_yellow {
-		color: rgb(255, 231, 95);
-	}
-	.sub {
-		font-size: .64rem;
-	}
-	.color_orange {
-		color: rgb(247, 100, 65);
-	}
-	.close {
-		line-height: .9;
-	}
-	.group {
-		text-align: center;
-	}
+	position: relative;
+	@include _sprite($android_line,1285px);
+}
+.android_color_1 {
+	height: 41.01%;
+	width: 100%;
+	position: absolute;
+	top: 13.5%;
+	display: inline-block;
+	@include _sprite($android_color_1,527px);
+}
+.android_color_2 {
+	height: 54.12%;
+	position: absolute;
+	top: 14.5%;
+	width: 100%;
+	@include _sprite($android_color_2,287px);
+}
+.group {
+	padding-bottom: .8rem;
+}
+.indent {
+	text-indent: .5rem;
+}
+.txt {
+	line-height: 1.25;
+	top: 54%;
+}
+.stress {
+	font-size: .96rem;
+}
+.sub {
+	font-size: .64rem;
+}
+.close {
+	line-height: .9;
+}
+.group {
+	text-align: center;
 }
 </style>

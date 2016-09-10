@@ -39,80 +39,69 @@
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';
 
-.page {
+.mian {
+	height: y_size(1285);
 	width: 100%;
-	height: 100%;
-	.mian {
-		height: y_size(1285);
-		width: 100%;
-		position: relative;
-		line-height: 1.111;
-		@include _sprite($home_ship_line,1285px);
-	}
-	.ship {
-		opacity: 0;
-		filter: alpha(opacity=0);
-		width: 100%;
-		height: 8.17%;
-		@include _sprite($home_ship,105px);
-	}
-	.ship_color {
-		opacity: 0;
-		filter: alpha(opacity=0);
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		@include _sprite($ship_color,691px);
-		height: y_size(715);
-	}
-	.txt {
-		position: absolute;
-		top: 60%;
-	}
-	.watchword {
-		color: rgb(0, 255, 72);
-		line-height: 0.958;
-		margin-bottom: .5rem;
-	}
-	.indent {
-		margin-left: -1.5rem;
-	}
-	.color_blue {
-		color: rgb(1, 244, 255);
-	}
-	.color_brown {
-		color: rgb(186, 107, 23);
-	}
-	.word {
-		font-size: .5432rem;
-	}
-	.center {
-		text-align: center;
-	}
-	.stress {
-		font-size: .8rem;
-	}
-	.we_are {
-		opacity: 0;
-		filter: alpha(opacity=0);
-		position: absolute;
-		top: 95%;
-		font-size: .5867rem;
-	}
+	position: relative;
+	line-height: 1.111;
+	@include _sprite($home_ship_line,1285px);
+}
+.ship {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	width: 100%;
+	height: 8.17%;
+	@include _sprite($home_ship,105px);
+}
+.ship_color {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include _sprite($ship_color,691px);
+	height: y_size(715);
+}
+.txt {
+	top: 60%;
+}
+.watchword {
+	color: rgb(0, 255, 72);
+	line-height: 0.958;
+	margin-bottom: .5rem;
+}
+.indent {
+	margin-left: -1.5rem;
+}
+.word {
+	font-size: .5432rem;
+}
+.center {
+	text-align: center;
+}
+.stress {
+	font-size: .8rem;
+}
+.we_are {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	top: 95%;
+	font-size: .5867rem;
 }
 .current {
 	.fade_in_count_1 {
 		-webkit-animation: fade_in .2s  linear .3s 1;
-		animation: fade_in .2s  linear .3s 1;
+		        animation: fade_in .2s  linear .3s 1;
 		-webkit-animation-fill-mode: forwards;
-		animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
 	}
 	.fade_in_count_2 {
 		-webkit-animation: fade_in .2s  linear .6s 1;
-		animation: fade_in .2s  linear .6s 1;
+		        animation: fade_in .2s  linear .6s 1;
 		-webkit-animation-fill-mode: forwards;
-		animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
 	}
 }
 </style>
