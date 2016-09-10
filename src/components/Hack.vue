@@ -44,10 +44,10 @@
 	@include _sprite($ship_light,645px);
 }
 .txt {
-	top: 72%;
+	top: 70.5%;
 }
 .watchword {
-	line-height: 1.146;
+	line-height: 1.8;
 	color: rgb(196, 199, 10);
 }
 .line {
@@ -65,7 +65,7 @@
 	color: rgb(0, 255, 72);
 }
 .belief {
-	line-height: 1.146;
+	line-height: 1.8;
 	color: rgb(196, 199, 10);
 }
 .hack_light {
@@ -88,6 +88,7 @@
 		        animation: hack_blink 1.8s  linear .3s 111;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
+		        @include eliminate_flash;
 	}
 }
 @-webkit-keyframes hack_blink

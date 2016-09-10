@@ -37,12 +37,13 @@
 .front_end_color {
 	height: 49.96%;
 	width: 100%;
+	@include _sprite($front_end_color,642px);
 	position: absolute;
 	top: 2%;
     -webkit-transform: translate(30px);
         -ms-transform: translate(30px);
             transform: translate(30px);
-	@include _sprite($front_end_color,642px);
+            @include eliminate_flash;
 }
 .group {
 	font-size: .72rem;

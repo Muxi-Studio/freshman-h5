@@ -96,12 +96,14 @@
 		        animation: fade_in .2s  linear .3s 1;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
+		        @include eliminate_flash;
 	}
 	.fade_in_count_2 {
 		-webkit-animation: fade_in .2s  linear .6s 1;
 		        animation: fade_in .2s  linear .6s 1;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
+		        @include eliminate_flash;
 	}
 }
 </style>

@@ -77,6 +77,7 @@
 		        animation: design_in .8s  linear .3s 1;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
+		        @include eliminate_flash;
 	}
 }
 @-webkit-keyframes design_in

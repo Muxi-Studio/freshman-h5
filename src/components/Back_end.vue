@@ -10,7 +10,7 @@
 					在团队中他着力于给
 				</div>
 				<div class="close indent">
-					产品开发<span>提供</span>强有力的
+					产品开发<span class="stress">提供</span>强有力的
 				</div>
 				<div class="close stress indent">
 					后备资源
@@ -76,6 +76,7 @@
 		        animation: back_end_ship_in .5s  linear .3s 1;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
+		        @include eliminate_flash;
 	}
 }
 @-webkit-keyframes back_end_ship_in

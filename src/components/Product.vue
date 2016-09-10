@@ -4,7 +4,7 @@
 			<div class="product_color fade_in_delay_3"></div>
 			<div class="txt v_center color_blue sub">
 				<div class="group color_blue txt_fade_in_delay_9 sub">
-					<span class="stress_h color_yellow">产品组</span>—挖掘潜在的可能性
+					<span class="stress_h color_yellow">产品组</span>—挖掘潜藏的可能性
 				</div>
 				<div class="indent txt_fade_in_delay_12">
 					在<span class="stress_h">互联网星</span>的探索中
@@ -13,7 +13,7 @@
 					她扮演着<span class="stress_l color_yellow">参谋长</span>的角色
 				</div>
 				<div class="indent txt_fade_in_delay_15">
-					为开创新的产品出谋划策
+					为开创新的产品而出谋划策
 				</div>
 				<div class="txt_last indent  txt_fade_in_delay_18">
 					是团队中的<span class="stress_h">灵魂人物</span>
