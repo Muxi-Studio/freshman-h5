@@ -107,7 +107,7 @@ a {
             animation: pointer_translateY .9s  linear 1.2s infinite;
 	-webkit-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards; 
-	@include eliminate_flash;
+	        @include eliminate_flash;
 }
 
 /*class*/
@@ -176,7 +176,7 @@ a {
 		        animation: fade_in_count 1.2s  linear .3s 3;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		      
 	}
 	.fade_in_delay_3 {
 		opacity: .5;
@@ -185,7 +185,7 @@ a {
 		        animation: fade_in 1.2s  linear .3s 1;
 		-webkit-animation-fill-mode: forwards;
 		        animation-fill-mode: forwards;
-				@include eliminate_flash;
+		
 	}
 	.fade_in_delay_6 {
 		opacity: 0;
@@ -193,8 +193,7 @@ a {
 		-webkit-animation: fade_in 1.2s  linear .6s 1;
 		        animation: fade_in 1.2s  linear .6s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;      
 	}
 	.fade_in_delay_12 {
 		opacity: 0;
@@ -202,15 +201,13 @@ a {
 		-webkit-animation: fade_in .9s  linear 1.2s 1;
 		        animation: fade_in .9s  linear 1.2s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;  
 	}
 	.fade_in_delay_21 {
 		-webkit-animation: fade_in .9s  linear 2.1s 1;
 		        animation: fade_in .9s  linear 2.1s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;      
 	}
 	.txt_fade_in_delay_9 {
 		opacity: 0;
@@ -218,8 +215,7 @@ a {
 		-webkit-animation: fade_in .9s  linear .9s 1;
 		        animation: fade_in .9s  linear .9s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;   
 	}
 	.txt_fade_in_delay_12 {
 		opacity: 0;
@@ -227,8 +223,7 @@ a {
 		-webkit-animation: fade_in 1.2s  linear 1.2s 1;
 		        animation: fade_in 1.2s  linear 1.2s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;     
 	}
 	.txt_fade_in_delay_15 {
 		opacity: 0;
@@ -236,8 +231,7 @@ a {
 		-webkit-animation: fade_in 1.5s  linear 1.5s 1;
 		        animation: fade_in 1.5s  linear 1.5s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;      
 	}
 	.txt_fade_in_delay_18 {
 		opacity: 0;
@@ -245,8 +239,7 @@ a {
 		-webkit-animation: fade_in 1.8s  linear 1.8s 1;
 		        animation: fade_in 1.8s  linear 1.8s 1;
 		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
-		        @include eliminate_flash;
+		        animation-fill-mode: forwards;      
 	}
 }
 .slide_to_1 {

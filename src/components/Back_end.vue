@@ -3,7 +3,7 @@
 		<div class="mian">
 			<div class="back_end_ship back_end_ship_in"></div>
 			<div class="txt v_center sub color_red fade_in_delay_6">
-				<div class="group sub color_red fade_in_delay_6">
+				<div class="group sub color_red">
 					<span class="stress color_yellow">后台组</span>—开启全方位支援
 				</div>
 				<div class="indent">

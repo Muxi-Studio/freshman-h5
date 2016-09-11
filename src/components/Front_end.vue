@@ -43,7 +43,6 @@
     -webkit-transform: translate(30px);
         -ms-transform: translate(30px);
             transform: translate(30px);
-            @include eliminate_flash;
 }
 .group {
 	font-size: .72rem;
