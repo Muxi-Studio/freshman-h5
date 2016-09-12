@@ -23,6 +23,7 @@
 				我要报名
 			</a>
 		</div>
+		<div id="next_bt" class="next_bt"></div>
 	</div>
 </template>
 
@@ -78,7 +79,7 @@
 .enter {
 	line-height: 1.146;
 	color: rgb(255, 141, 41);
-	padding-top: 1.5rem;
+	padding: 1.5rem 1rem 0;
 	position: absolute;
 	bottom: 0;
 }

@@ -21,13 +21,13 @@ new Vue({
 var init=()=>{
     var startX,startY,endX,endY,current_page=1,
     page=document.getElementsByClassName('page'),
+    pointer=document.getElementById('pointer'),
     page_count=page.length,
     container=document.getElementById('app');
     document.addEventListener('touchstart', (ev)=>{
         startX = ev.touches[0].pageX;
         startY = ev.touches[0].pageY;  
     }, false);
-
     document.addEventListener('touchend', (ev)=>{
         endX = ev.changedTouches[0].pageX;
         endY = ev.changedTouches[0].pageY;

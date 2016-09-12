@@ -21,6 +21,7 @@
 				</div>
 			</div>
 		</div>
+		<div id="next_bt" class="next_bt"></div>
 	</div>
 </template>
 

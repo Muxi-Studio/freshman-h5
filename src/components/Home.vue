@@ -9,7 +9,7 @@
 						<span class="line line_top"></span>
 						<span class="line line_bottom"></span>
 					</div>
-					BORN TO HACK
+					<span>BORN TO HACK</span>
 					<div class="line_box_after">
 						<span class="line line_bottom"></span>
 						<span class="line line_top"></span>
@@ -32,9 +32,20 @@
 			</div>
 			<div class="we_are center color_brown v_center fade_in_delay_21">我们是</div>
 		</div>
+		<div v-if='show' id="next_bt" class="next_bt"></div>
 	</div>
 </template>
 
+<script>
+export default {
+    props: ['control'],
+    data(){
+        return {
+            show: this.control.show[0]
+        }
+    }
+}
+</script>
 <style lang='scss' scoped>
 @import '../../static/common.scss';
 @import '../../static/mixins/_sprite.scss';

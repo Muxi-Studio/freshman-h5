@@ -2,9 +2,6 @@
 	<div class="page">
 		<div class="mian">
 			<div class="group_3_2 fade_in_delay_3"></div>
-			<div class="xueer product">学而</div>
-			<div class="box product">华师匣子</div>
-			<div class="rbt product">木小犀</div>
 			<div class="txt v_center">
 				<div class="txt_c color_blue txt_fade_in_delay_9">
 					<div>
@@ -22,7 +19,7 @@
 						华师匣子—华师专属利器
 					</div>
 					<div>
-						学而—选课评课优质平台
+						学而—华师评课优质平台
 					</div>
 					<div>
 						木小犀—华师智能问答机器人
@@ -31,6 +28,7 @@
 			</div>
 			<div class="intro v_center txt_fade_in_delay_15">各组介绍</div>
 		</div>
+		<div id="next_bt" class="next_bt"></div>
 	</div>
 </template>
 
@@ -56,19 +54,6 @@
 	color: rgb(154, 60, 0);
 	line-height: 0.754;
 	position: absolute;
-}
-.xueer,.rbt {
-	top: 46%;
-}
-.xueer {
-	left: 8%;
-}
-.rbt {
-	left: 73%;
-}
-.box {
-	top: 45%;
-	left: 36%;
 }
 .txt {
 	top: 56%;

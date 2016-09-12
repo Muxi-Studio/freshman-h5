@@ -1,6 +1,7 @@
 <template>
 	<div v-load="show" :class="hide" id="app">
-	   <home></home>
+	   <init :control='control'></init>
+	   <home :control='control'></home>
 	   <group_2></group_2>
 	   <group_3></group_3>
 	   <product></product>
@@ -10,10 +11,10 @@
 	   <android></android>
 	   <hack></hack>
 	</div>
-	<div :class="hide" class="pointer"></div>
 </template>
 
 <script>
+import init from './components/init'
 import Home from './components/Home'
 import Group_2 from './components/Group_2'
 import Group_3 from './components/Group_3'
@@ -27,10 +28,16 @@ import Hack from './components/Hack'
 export default {
 	data(){
 		return {
-			hide: 'hide'
+			control: {
+				hide: 'hide',
+				width: [90],
+				load: [false],
+				show: [true]
+			}
 		}
 	},
 	components: {
+		init,
 		Home,
 		Group_2,
 		Group_3,
@@ -43,7 +50,7 @@ export default {
 	},
 	methods: {
 		show(){
-			this.hide='';
+			this.control.load.$set(0,true);
 		}
 	}
 }
@@ -56,7 +63,7 @@ export default {
 /*reset*/
 @font-face {
 	font-family: 'zcool';
-	src: url('../static/font.ttf');
+	src: url('../static/font.ttf') format('truetype');
 }
 
 html,body {
@@ -65,6 +72,7 @@ html,body {
 	overflow: hidden;
 	position: relative;
 	z-index: -300;
+	font-size: calc(16px + 4.2vh);
 }
 body {
 	margin: 0;
@@ -75,6 +83,7 @@ body {
 }
 a {
 	outline: none;
+	text-decoration: none;
 }
 .hide {
 	display: none;
@@ -91,20 +100,20 @@ a {
 }
 
 /*this page*/
-.pointer {
-	width: 1.08rem;
-	height: 1.40rem;
+.next_bt {
+	width: 1.5rem;
+	height: 2.6rem;
 	opacity: 0;
 	filter: alpha(opacity=0);
-	position: fixed;
+	position: absolute;
 	z-index: -100;
 	bottom: 1.47rem;
 	left: -webkit-calc(50% - 0.54rem);
 	left: calc(50% - 0.54rem);
 	background: url('sprite/sprite.png') no-repeat;
-	@include sprite__size($pointer,107px);
-    -webkit-animation: pointer_translateY .9s  linear 1.2s infinite;
-            animation: pointer_translateY .9s  linear 1.2s infinite;
+	@include sprite__size($next_bt,167px);
+    -webkit-animation: next_bt_translateY .9s  linear 1.2s infinite;
+            animation: next_bt_translateY .9s  linear 1.2s infinite;
 	-webkit-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards; 
 	        @include eliminate_flash;
@@ -143,6 +152,7 @@ a {
 .page {
 	width: 100%;
 	height: 100%;
+	position: relative;
 }
 
 /*common*/
@@ -161,12 +171,13 @@ a {
 .line_box_after {
 	display: inline-block;
 	font-size: 0;
+
 }
 .line_box_before {
-	margin-right: -.4rem;
+	margin-right: -.2rem;
 }
 .line_box_after {
-	margin-left: -.4rem;
+	margin-left: -.2rem;
 }
 
 /*animation class*/
@@ -336,7 +347,7 @@ a {
 		filter: alpha(opacity=1);
 	}
 }
-@-webkit-keyframes pointer_translateY
+@-webkit-keyframes next_bt_translateY
 {
 	0 {
 		opacity: .5;
@@ -354,7 +365,7 @@ a {
 		bottom: 1.07rem;
 	}
 }
-@keyframes pointer_translateY
+@keyframes next_bt_translateY
 {
 	0 {
 		opacity: .5;

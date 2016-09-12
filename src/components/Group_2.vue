@@ -26,6 +26,7 @@
 				<div class="we_are color_brown">我们有</div>
 			</div>
 		</div>
+		<div id="next_bt" class="next_bt"></div>
 	</div>
 </template>
 
